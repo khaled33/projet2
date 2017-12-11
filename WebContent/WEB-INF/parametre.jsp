@@ -1,3 +1,8 @@
+<%@page import="com.exem.beans.rapport"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -162,43 +167,44 @@
                             <thead>
                             <tr>
                                 <th>Titre De Rapport</th>
-                                <th>Nom De L\'etudiant</th>
+                                <th>Nom De L'etudiant</th>
                                 <th>Année</th>
                                 <th>Branche</th>
                                 <th>Mention</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
-                            <tbody id="table">';
-
+                            <tbody id="table">
+		<%
+		List<rapport> list=(ArrayList<rapport>)request.getAttribute("list");
+		
+		for(int i = 0; i < list.size();i++){
+		%>
                                          <tr>
-                                        <td>'.$lige[2].' </td>
-                                        <td class="center">'.$lige[3]  .' . '  . '  '.  $lige[4] .'</td>
-                                        <td class="center">'.$lige[6].'</td>
-                                        <td class="center">'.$lige[7].'</td>
+                                        <td>'<% out.println(list.get(i).getTitre_rapport() );%> </td>
+                                        <td class="center"><% out.println(list.get(i).getNom_etudi());%></td>
+                                        <td class="center"><% out.println(list.get(i).getPrenom_etudiant() );%></td>
+                                        <td class="center"><% out.println(list.get(i).getAnnee_rapport() );%></td>
                                         <td class="center">
-                                            <span class="label-warning label label-default">'.$lige[8].'</span>
+                                            <span class="label-warning label label-default"><% out.println(list.get(i).getBranche_etudes() );%></span>
                                         </td>
                                         <td class="center">
-                                            <a class="btn btn-success btn-xs" href="rapport.php?id_rapport='.$lige[0].'">
-                                                <i class="glyphicon glyphicon-zoom-in icon-white"></i>
-                                                View
-                                            </a>
-                                            <a class="btn btn-info btn-xs" href="modiferap">
+                                            
+                                            <a class="btn btn-info btn-xs" href="modiferap?id=<% out.println(list.get(i).getId_rapport() );%>">
                                                 <i class="glyphicon glyphicon-edit icon-white"></i>
                                                 Edit
                                             </a>
-                                            <a class="btn btn-danger btn-xs sup" href="envoi-rapport.php?id_rapport='.$lige[0].'">
+                                            <a class="btn btn-danger btn-xs sup" href="supp?id=<% out.println(list.get(i).getId_rapport() );%> ">
                                                 <i class="glyphicon glyphicon-trash icon-white"></i>
                                                 Delete
                                             </a>
                                         </td>
                                     </tr>
-
+<%} %>
                             </tbody>
-                            '; }
-                      echo'  </table>
-                    </div>';
+                          
+                       </table>
+                    </div>
                 </div>
 
 

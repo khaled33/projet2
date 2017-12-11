@@ -39,7 +39,8 @@ public class modifeRap extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		DaoRapImpli daoRapImpli =new DaoRapImpli();
 		rapport rap = new rapport();
-		rap.setId_rapport(8);
+		int id= Integer.parseInt(request.getParameter("id"));
+		rap.setId_rapport(id);
 		rap.setNom_etudi(request.getParameter("nom"));
 		rap.setPrenom_etudiant(request.getParameter("prnom"));
 		rap.setTitre_rapport(request.getParameter("titre"));
@@ -52,7 +53,8 @@ public class modifeRap extends HttpServlet {
 		
 
 
-		
+			this.getServletContext().getRequestDispatcher("/WEB-INF/modiferap.jsp").forward( request, response );
+
 		
 
 	}

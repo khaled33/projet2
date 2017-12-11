@@ -115,23 +115,22 @@
 
     <form name="formuler" class="form" method="post" action="" >
          <div  class="form-group-sm">
-            <input type="text" placeholder="Nom Etudiant" name="nom" class="form-control"  required id="nom" value="ss"><br>
+            <input type="text" placeholder="Nom Etudiant" name="nom" class="form-control"  required id="nom" ><br>
 
-            <input type="text" placeholder="Prenom Etudiant" name="prnom" class="form-control" required id="prnom" value="ss"><br>
+            <input type="text" placeholder="Prenom Etudiant" name="prnom" class="form-control" required id="prnom" ><br>
 
-            <input type="text" placeholder="Titre De Rapport" name="titre" class="form-control" required id="titre" value="ss"><br>
+            <input type="text" placeholder="Titre De Rapport" name="titre" class="form-control" required id="titre" ><br>
 
             <select class="form-control" required name="branche">
                 <option ></option>
-                <option name="branche" >T.L.A TMW</option>
-                <option name="branche">T.L.A FIM</option>
-                <option name="branche">P.MSI</option>
-                <option name="branche">D.MSI</option>
-                <option name="branche">T.G TMW</option>
+                <option name="branche" >MDW</option>
+                <option name="branche">RSI</option>
+                <option name="branche">DSI</option>
+                
             </select> <br>
 
-            <input type="text" placeholder="Montion De Rapport" name="montion" class="form-control" required  id="montion" value="ss"><br>
-            <input type="text" placeholder="année scolaire " name="annee" class="form-control" required id="annee" value="ss"><br>
+            <input type="text" placeholder="Montion De Rapport" name="montion" class="form-control" required  id="montion" ><br>
+            <input type="text" placeholder="année scolaire " name="annee" class="form-control" required id="annee" ><br>
             <textarea  name="desc" class="form-control" required id="des"  placeholder=" ss "></textarea><br>
 
             <label class="custom-file">Ficher PDF:

@@ -21,6 +21,8 @@ public class parametre extends HttpServlet {
 
 		DaoRapImpli rap =new DaoRapImpli();
 		rap.list();
+		
+		request.setAttribute("list", rap.list());
 	this.getServletContext().getRequestDispatcher("/WEB-INF/parametre.jsp").forward( request, response );
 	}
 	

@@ -73,11 +73,24 @@ System.out.println("ok");
 		return obj;
 	}
 
+	
+	
 	@Override
 	public boolean delete(int id) {
-		// TODO Auto-generated method stub
+		String query="DELETE FROM `rapports` WHERE `id_rapport`="+id;
+		
+		 
+		try {
+			Statement stmt = (Statement) connect.createStatement();
+		    stmt.executeUpdate(query);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return false;
 	}
+	
+	
 
 	@Override
 	public List<rapport> list() {
