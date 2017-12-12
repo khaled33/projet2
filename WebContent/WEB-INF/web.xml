@@ -35,6 +35,15 @@
     <url-pattern>/index</url-pattern>
   </servlet-mapping>
   
+  //******* page modifier ********* //
+  <servlet>
+  <servlet-name>modifier</servlet-name>
+    <servlet-class>com.exem.servlets</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifier</servlet-name>
+    <url-pattern>/modifier</url-pattern>
+  </servlet-mapping>
   //******* page parametre ********* //
   
   <servlet>
@@ -68,8 +77,27 @@
     <url-pattern>/supp</url-pattern>
   </servlet-mapping>
 
+//******* page modifer user ********* //
+  
+  <servlet>
+    <servlet-name>modifier</servlet-name>
+    <servlet-class>com.exem.servlets.modifier</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>modifier</servlet-name>
+    <url-pattern>/modifier</url-pattern>
+  </servlet-mapping>
 
-
+//******* page deconnexion  ********* //
+  
+  <servlet>
+    <servlet-name>deconnexion</servlet-name>
+    <servlet-class>com.exem.servlets.deconnexion</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deconnexion</servlet-name>
+    <url-pattern>/deconnexion</url-pattern>
+  </servlet-mapping>
 
  
   

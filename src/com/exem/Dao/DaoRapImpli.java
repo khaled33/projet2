@@ -108,7 +108,7 @@ System.out.println("ok");
 				s.setTitre_rapport(rs.getString("titre_rapport"));
 				s.setNom_etudi(rs.getString("nom_etudi"));
 				s.setPrenom_etudiant(rs.getString("prenom_etudiant"));
-				s.setTitre_rapport(rs.getString("rapport"));
+				s.setRapport(rs.getString("rapport"));
 				s.setAnnee_rapport(rs.getString("annee_rapport"));
 				s.setBranche_etudes(rs.getString("branche_etudes"));
 				s.setMention_rapport(rs.getString("mention_rapport"));

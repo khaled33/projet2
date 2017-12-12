@@ -20,7 +20,7 @@ public class parametre extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		DaoRapImpli rap =new DaoRapImpli();
-		rap.list();
+		
 		
 		request.setAttribute("list", rap.list());
 	this.getServletContext().getRequestDispatcher("/WEB-INF/parametre.jsp").forward( request, response );
@@ -47,9 +47,9 @@ public class parametre extends HttpServlet {
 		daoRapImpli.ajout(rap);
 		
 
+		response.sendRedirect( request.getContextPath()+"/index");
 
-
-		this.getServletContext().getRequestDispatcher("/WEB-INF/parametre.jsp").forward( request, response );
+		//this.getServletContext().getRequestDispatcher("/WEB-INF/parametre.jsp").forward( request, response );
 
 
 		

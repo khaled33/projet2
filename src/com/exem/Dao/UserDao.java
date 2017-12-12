@@ -87,5 +87,25 @@ public class UserDao  implements Dao<User> {
 	}
 
 	
+	public void modifier(String nom ,String prenom ,String pass ,String email){
+		 
+		 
 
+		 String query ="UPDATE `user` SET "+"`Nom_user` = ?, "	+"`prenom_user` = ?, "+"`pass_user` = ? ,"
+					+ " WHERE "	+ "`email_user` = ?";
+			
+			try {
+				PreparedStatement  prepdStmt = connect.prepareStatement(query);
+				prepdStmt.setString(1, nom);
+				prepdStmt.setString(2, prenom);
+				prepdStmt.setString(3, pass);
+				prepdStmt.setString(4, email);
+							
+				prepdStmt.execute(); 
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}		
+		
+	 }
 }
